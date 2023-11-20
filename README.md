@@ -3,15 +3,15 @@
 A website designed to evaluate user's mood through a mood wheel selection, photo capture, or image upload. It then generates a Spotify playlist matching the identified emotional state.
 
 ## Home Page
-![Home](https://github.com/gabriellecannella/mood-music/assets/61055337/9d4b2fc9-52c4-48bd-8833-1ce8de5afcb1)
+![Home](https://github.com/dannirash/mood-music/assets/61055337/5ded48bb-70f5-414b-9926-1c7951d80c71)
 ## Mood Wheel Page
-![Mood Wheel](https://github.com/gabriellecannella/mood-music/assets/61055337/12014ed4-af02-4c2d-bc52-e6acbc04c75f)
+![MoodWheel](https://github.com/dannirash/mood-music/assets/61055337/405133a1-1b86-45d3-8a03-2bb5e2752229)
 ## Live Photo Capture Page
-![live Photo Capture](https://github.com/gabriellecannella/mood-music/assets/61055337/24ce0e99-aef7-48a4-883f-a6d828fd45b6)
+![Face Recognition](https://github.com/dannirash/mood-music/assets/61055337/2d1586c9-7131-4a1d-b88b-9e43547d0072)
 ## Image Upload Page
-![Image Upload](https://github.com/gabriellecannella/mood-music/assets/61055337/d837d0e5-6dd4-4053-9dde-92c26b95350c)
+![Image Upload](https://github.com/dannirash/mood-music/assets/61055337/40ee4cf3-1632-4440-94b7-d9103ae19b9f)
 ## Song List
-![Song List](https://github.com/gabriellecannella/mood-music/assets/61055337/9b4b30fd-acb1-4c9b-b3e0-dd2fdab08465)
+![Song List](https://github.com/dannirash/mood-music/assets/61055337/98999e48-8221-4a03-8bff-c4cf15f40478)
 
 ## Setup Instructions
 
