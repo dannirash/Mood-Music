@@ -1,45 +1,67 @@
 import "../App.css";
-import React, { useEffect } from "react";
-import { useState } from "react";
-import TextFields from "./TextFields";
-import StyledTable from "./StyledTable.js";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function SongsList({mood}) {
+import StyledTable from "./StyledTable.js";
+import TextFields from "./TextFields";
+
+export default function SongsList({ mood }) {
   const [rows, setRows] = useState([]);
-  const [genre, setGenre] = useState([]);
+  const [genre, setGenre] = useState("");
+
   useEffect(() => {
     if (rows.length > 0) {
       window.scrollTo({ top: 740, behavior: "smooth" });
     }
   }, [rows]);
 
-  useEffect( () => {
-        axios
-          .get(`http://127.0.0.1:5000/songs?arg1=${mood}`)
-          .then((response) => {
-            const data = response.data;
-            try{
-              setGenre(data[0].mood.toLowerCase())
-              setRows(data);
-            }
-            catch{}
-          });
+  useEffect(() => {
+    const trimmedMood = mood?.trim();
+    if (!trimmedMood) {
+      setRows([]);
+      setGenre("");
+      return;
+    }
+
+    const source = axios.CancelToken.source();
+
+    axios
+      .get("/api/songs", {
+        params: { arg1: trimmedMood, limit: 24, shuffle: true },
+        cancelToken: source.token,
+      })
+      .then((response) => {
+        const data = Array.isArray(response.data) ? response.data : [];
+        if (data.length > 0) {
+          setGenre((data[0].mood || "").toLowerCase());
+          setRows(data);
+        } else {
+          setGenre("");
+          setRows([]);
+        }
+      })
+      .catch((error) => {
+        if (!axios.isCancel(error)) {
+          setGenre("");
+          setRows([]);
+        }
+      });
+
+    return () => source.cancel("Songs request canceled");
   }, [mood]);
 
-  if(mood != ""){
+  if (mood !== "") {
     return (
       <>
-        <TextFields setRows={ setRows } mood= {mood} genre={genre} />
-        <StyledTable rows={ rows }/>
+        <TextFields mood={mood} genre={genre} />
+        <StyledTable rows={rows} />
       </>
     );
   }
-  else{
-    return (
-      <>
-        <TextFields setRows={ setRows } mood= {mood} genre={genre} />
-      </>
-    );
-  }
+
+  return (
+    <>
+      <TextFields mood={mood} genre={genre} />
+    </>
+  );
 }

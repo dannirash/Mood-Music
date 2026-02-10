@@ -7,36 +7,48 @@ import { ButtonUpload } from "./buttons/ButtonUpload";
 
 function HeroSection() {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <video src="/videos/background.mp4" autoPlay loop muted className="dimmed-video" />
-      <h1>START LISTENING</h1>
-      <p>Music tailored for you.</p>
-      <div className="hero-btns">
-        <ButtonWheel
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          MOOD WHEEL
-        </ButtonWheel>
+      <div className="hero-backdrop-mask" aria-hidden="true" />
+      <div className="hero-content page-card">
+        <p className="hero-kicker">Emotion Driven Listening</p>
+        <h1>Find The Right Track For The Moment You Are In</h1>
+        <p>
+          Blend mood wheel input, live camera analysis, and image understanding to
+          generate recommendations that feel intentional, not random.
+        </p>
+        <div className="hero-stat-row" aria-hidden="true">
+          <span>Live Face Signal</span>
+          <span>Adaptive Confidence</span>
+          <span>Mood-Based Shuffle</span>
+        </div>
+        <div className="hero-btns">
+          <ButtonWheel
+            className="btns"
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+          >
+            Mood Wheel
+          </ButtonWheel>
 
-        <ButtonCamera
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          FACE DETECTION
-        </ButtonCamera>
+          <ButtonCamera
+            className="btns"
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+          >
+            Camera AI
+          </ButtonCamera>
 
-        <ButtonUpload
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          IMAGE UPLOAD
-        </ButtonUpload>
+          <ButtonUpload
+            className="btns"
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+          >
+            Upload Image
+          </ButtonUpload>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

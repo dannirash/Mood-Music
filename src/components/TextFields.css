@@ -1,17 +1,27 @@
-/* Center the text horizontally and vertically */
+.text-fields-container {
+  width: min(1260px, calc(100% - 20px));
+  margin: 0 auto 10px;
+  padding: 14px 14px 6px;
+}
+
 .centered-text {
-  background-color: rgba(0, 0, 0, 0.5); /* Use rgba to specify transparency */
-  text-align: center; /* Center the text horizontally within the box */
+  margin: 0;
+  text-align: center;
+  color: var(--text-main);
+}
 
-  color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
+.text-fields-container .centered-text:first-child {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
 
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  }
-  
+.text-fields-container .centered-text:last-child {
+  margin-top: 8px;
+  font-size: clamp(1.25rem, 4vw, 2.3rem);
+  line-height: 1.08;
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  text-transform: capitalize;
+}

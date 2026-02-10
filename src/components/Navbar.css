@@ -1,49 +1,98 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  padding: 14px 18px 0;
 }
 
 .navbar-container {
+  width: min(1280px, 100%);
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 100%;
-}
-
-.nav-links {
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
-}
-
-.nav-links:hover {
-  border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
-}
-
-.logo-container {
-  flex: 1;
-  text-align: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(130deg, rgba(14, 27, 45, 0.88), rgba(9, 19, 33, 0.76));
+  backdrop-filter: blur(13px);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar-logo {
-  font-size: 3rem; /* Adjust the font size as needed */
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: white; /* Change this to your desired logo color */
 }
 
-.spotify-login-container {
-  margin-left: auto;
+.navbar-logo span {
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  color: var(--text-main);
+  letter-spacing: 0.01em;
+}
+
+.navbar-links {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-link--active {
+  color: #05292f;
+  background: linear-gradient(120deg, var(--accent-cyan), #9cf3ea);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 780px) {
+  .navbar {
+    padding: 10px 10px 0;
+  }
+
+  .navbar-container {
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .navbar-link {
+    font-size: 0.78rem;
+    padding: 7px 10px;
+  }
 }

@@ -1,19 +1,22 @@
-.clicked-segment {
-    fill: #FFC107; /* Change to your desired highlight color */
-    transition: fill 0.2s; /* Add a smooth transition effect */
-  }
+.moodwheel-chart {
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-soft);
+  background:
+    radial-gradient(460px 260px at 18% 18%, rgba(245, 180, 82, 0.12), transparent 62%),
+    radial-gradient(480px 260px at 82% 78%, rgba(51, 210, 193, 0.12), transparent 62%),
+    rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
 
-  PieChart.custom-label {
-    fill: white;
-    font-weight: bold;
-  }
+.moodwheel-chart svg {
+  max-width: 100%;
+}
 
-  .custom-pie-chart:hover .muix-pie-chart-preview {
-    display: none;
-  }
-  .css-1u0lry5-MuiChartsLegend-root {
-    display: none;
-  }
-  .translated{
-    transform: translate(50px,0);
-  }
+.css-1u0lry5-MuiChartsLegend-root {
+  display: none;
+}

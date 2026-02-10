@@ -1,51 +1,54 @@
 :root {
-    --primary: #fff;
-  }
-  
-  .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
-  }
-  
-  .btn--outline {
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
-  }
-  
-  .btn--medium {
-    padding: 8px 20px;
-    font-size: 18px;
-  }
-  
-  .btn--large {
-    padding: 12px 26px;
-    font-size: 20px;
-  }
-  
-  .btn--large:hover,
-  .btn--medium:hover {
-    transition: all 0.3s ease-out;
-    background: #fff;
-    color: #242424;
-    transition: 250ms;
-  }
+  --button-text-dark: #05292f;
+}
 
-  .custom-upload-btn {
-    transition: box-shadow 0.3s ease;
-  }
-  .custom-upload-btn:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add other styles for hover effect here */
-  }
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn--primary {
+  color: var(--button-text-dark);
+  background: linear-gradient(130deg, #b6f8ef, var(--accent-cyan));
+  box-shadow: 0 12px 24px rgba(51, 210, 193, 0.25);
+}
+
+.btn--outline {
+  color: var(--text-main);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02))
+      padding-box,
+    linear-gradient(120deg, rgba(51, 210, 193, 0.85), rgba(245, 180, 82, 0.8))
+      border-box;
+  border: 1px solid transparent;
+}
+
+.btn--outline:hover,
+.btn--medium:hover,
+.btn--large:hover {
+  box-shadow: 0 12px 26px rgba(9, 19, 33, 0.42);
+}
+
+.btn--medium {
+  font-size: 0.82rem;
+  padding: 10px 14px;
+}
+
+.btn--large {
+  font-size: 0.9rem;
+  padding: 13px 18px;
+}

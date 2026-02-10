@@ -1,0 +1,49 @@
+.moodwheel-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.moodwheel-page__veil {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(860px 520px at 7% 20%, rgba(51, 210, 193, 0.2), transparent 60%),
+    radial-gradient(720px 520px at 89% 20%, rgba(245, 180, 82, 0.2), transparent 58%),
+    radial-gradient(820px 520px at 54% 98%, rgba(255, 127, 102, 0.16), transparent 62%);
+}
+
+.moodwheel-page__shell {
+  display: grid;
+  gap: 20px;
+}
+
+.moodwheel-page__intro {
+  position: relative;
+  z-index: 2;
+  padding: clamp(20px, 3.8vw, 30px);
+}
+
+.moodwheel-page__selection {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: #daf6ff;
+  font-size: 0.9rem;
+}
+
+.moodwheel-page__selection strong {
+  color: var(--accent-amber);
+  text-transform: capitalize;
+}
+
+.moodwheel-page__chart {
+  position: relative;
+  z-index: 2;
+  padding: clamp(14px, 3vw, 26px);
+}
+
+.moodwheel-page__songs {
+  position: relative;
+  z-index: 2;
+}

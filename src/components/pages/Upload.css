@@ -1,0 +1,89 @@
+.upload-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.upload-page__veil {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(760px 460px at 9% 18%, rgba(255, 127, 102, 0.2), transparent 60%),
+    radial-gradient(860px 500px at 88% 24%, rgba(51, 210, 193, 0.18), transparent 58%),
+    radial-gradient(760px 500px at 52% 92%, rgba(245, 180, 82, 0.15), transparent 64%);
+}
+
+.upload-page__shell {
+  display: grid;
+  gap: 20px;
+}
+
+.upload-page__panel {
+  position: relative;
+  z-index: 2;
+  padding: clamp(20px, 3.8vw, 34px);
+}
+
+.upload-dropzone {
+  margin-top: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 22px;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.upload-dropzone strong {
+  font-size: clamp(1rem, 2.6vw, 1.3rem);
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+}
+
+.upload-dropzone span {
+  color: var(--text-muted);
+  font-size: 0.87rem;
+}
+
+.upload-dropzone:hover,
+.upload-dropzone--active {
+  border-color: rgba(51, 210, 193, 0.95);
+  background: rgba(51, 210, 193, 0.14);
+  transform: translateY(-1px);
+}
+
+.upload-dropzone__icon {
+  font-size: 2rem !important;
+  color: var(--accent-cyan);
+}
+
+.upload-page__result {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: #d3fef5;
+}
+
+.upload-page__result strong {
+  text-transform: capitalize;
+  color: var(--accent-amber);
+}
+
+.upload-page__error {
+  margin-top: 12px;
+  color: #ffb8ad;
+  font-size: 0.9rem;
+}
+
+.upload-page__songs {
+  position: relative;
+  z-index: 2;
+}

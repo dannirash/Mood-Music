@@ -1,5 +1,5 @@
 import "./App.css";
-import React, {useEffect, useState } from 'react';
+import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
@@ -8,24 +8,25 @@ import Camera from "./components/pages/Camera";
 import MoodWheel from "./components/pages/MoodWheel";
 import Footer from "./components/Footer";
 
-// import results from "./components/results";
-
 function App() {
-  useEffect(() => {
-  }, []);
   return (
-    <>
-      <Router>
-        <Navbar/>
+    <div className="app-shell">
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
+        <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home></Home>}></Route>
-          <Route path="/camera" exact element={<Camera></Camera>}></Route>
-          <Route path="/upload" exact element={<Upload></Upload>}></Route>
-          <Route path="/mood-wheel" exact element={<MoodWheel></MoodWheel>}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/camera" element={<Camera />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/mood-wheel" element={<MoodWheel />} />
         </Routes>
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 

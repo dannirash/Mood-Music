@@ -10,6 +10,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -30,3 +31,6 @@ venv
 
 backend/pics/annotated_snapshot.jpg
 backend/pics/snapshot.jpg
+__pycache__/
+*.py[cod]
+.pytest_cache/
