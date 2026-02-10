@@ -99,60 +99,19 @@ Example:
 curl "http://127.0.0.1:5000/api/songs?arg1=neutral&limit=24&shuffle=true"
 ```
 
-## Visual Reference (Single Source)
+## Visual Preview
 
-Use only this video as visual reference:
+Use this video as the only visual reference:
 
 - `public/videos/moodmusic.mp4` (duration: ~32.9s)
 
-## Screenshot Placeholders (From Video Only)
+Direct link:
 
-Create screenshots only from `public/videos/moodmusic.mp4` and save as:
+- [Open video](public/videos/moodmusic.mp4)
 
-- `docs/screenshots/video-01-00-02.png`
-- `docs/screenshots/video-02-00-06.png`
-- `docs/screenshots/video-03-00-10.png`
-- `docs/screenshots/video-04-00-14.png`
-- `docs/screenshots/video-05-00-18.png`
-- `docs/screenshots/video-06-00-22.png`
-- `docs/screenshots/video-07-00-26.png`
-- `docs/screenshots/video-08-00-30.png`
+Embedded preview:
 
-Markdown placeholders:
-
-![Video Frame 01](docs/screenshots/video-01-00-02.png)
-![Video Frame 02](docs/screenshots/video-02-00-06.png)
-![Video Frame 03](docs/screenshots/video-03-00-10.png)
-![Video Frame 04](docs/screenshots/video-04-00-14.png)
-![Video Frame 05](docs/screenshots/video-05-00-18.png)
-![Video Frame 06](docs/screenshots/video-06-00-22.png)
-![Video Frame 07](docs/screenshots/video-07-00-26.png)
-![Video Frame 08](docs/screenshots/video-08-00-30.png)
-
-## What To Screenshot
-
-Capture these exact timestamps from `public/videos/moodmusic.mp4`:
-
-1. `00:02` -> `video-01-00-02.png`
-2. `00:06` -> `video-02-00-06.png`
-3. `00:10` -> `video-03-00-10.png`
-4. `00:14` -> `video-04-00-14.png`
-5. `00:18` -> `video-05-00-18.png`
-6. `00:22` -> `video-06-00-22.png`
-7. `00:26` -> `video-07-00-26.png`
-8. `00:30` -> `video-08-00-30.png`
-
-Example extraction command:
-
-```bash
-ffmpeg -ss 00:10 -i public/videos/moodmusic.mp4 -frames:v 1 docs/screenshots/video-03-00-10.png
-```
-
-## Screenshot Tips
-
-- Keep filenames exactly as listed above
-- Use the same video file every time (`public/videos/moodmusic.mp4`)
-- Do not use UI page screenshots as references for this section
+<video src="public/videos/moodmusic.mp4" controls muted loop playsinline preload="metadata" width="960"></video>
 
 ## Troubleshooting
 
